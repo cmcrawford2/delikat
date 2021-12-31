@@ -15,6 +15,9 @@ require('./handlers/passport');
 // create our Express app
 const app = express();
 
+console.log("something");
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views')); // this is the folder where we keep our pug files
 app.set('view engine', 'pug'); // we use the engine pug, mustache or EJS work great too
@@ -39,7 +42,7 @@ app.use(session({
   key: process.env.KEY,
   resave: false,
   saveUninitialized: false,
-  store: new MongoStore({ mongoUrl: process.env.DATABASE })
+  store: new MongoStore({ mongoUrl: process.env.MONGODB_URI })
 }));
 
 // Passport JS is what we use to handle our logins
