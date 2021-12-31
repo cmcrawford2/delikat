@@ -60,7 +60,6 @@ exports.getStores = async (req, res) => {
   const page = req.params.page || 1;
   const limit = 6;
   const skip = (page - 1) * limit;
-  console.log(page, limit, skip);
 
   const storesPromise = Store
     .find()
