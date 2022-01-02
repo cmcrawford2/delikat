@@ -479,7 +479,6 @@ p {
   font-size: 1.6rem; }
 
 .title {
-  word-wrap: break-word;
   position: relative;
   z-index: 2;
   margin: 0;
